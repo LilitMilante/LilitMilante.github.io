@@ -1,0 +1,244 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Regular'), local('Gilroy-Regular'),
+        url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+        url('../fonts/Gilroy-Regular.woff') format('woff'),
+        url('../fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+  
+body {
+    font-family: 'Gilroy';
+}
+h3 {
+    margin: 0;
+    font-size: 18px;
+}
+button {
+    margin: 0;
+    padding: 0;
+}
+input {
+    padding: 8px 0;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1.5px solid #E1E3EE;
+    outline: none;
+}
+input::placeholder {
+    color: #D0D3E2;
+}
+input[type="radio"] {
+  width: 22px;
+  height: 22px;
+  margin-right: 12px;
+}
+p {
+    margin: 0;
+}
+label {
+    font-size: 16px;
+}
+form {
+    display: grid;
+}
+
+/* button */
+.btn {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 45px;
+    padding: 6px 0;
+    background: #23C967;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.btn-add {
+    border: none;
+    background-color: white; 
+    text-align: start;
+}
+.btn-bg-red {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 45px;
+    padding: 6px 0;
+    margin: 12px 0;
+    background: #EA717F;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+
+/* margins */
+.mb-12 {
+    margin-bottom: 12px;
+}
+.mb-25 {
+    margin-bottom: 25px;
+}
+.btn-85 {
+    margin: 85px 0 34px 0;
+}
+
+
+/* colors */
+.bg-green {
+    background-color:#23C967;
+}
+.text-green {
+    color: #23C967;
+}
+.text-gray {
+    color: #AFB4CC;
+}
+
+/* align */
+.text-center {
+text-align: center;
+}
+
+
+
+/* content */
+.container {
+    display: grid;
+    row-gap: 24px;
+    max-width: 440px;
+    padding: 32px;
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 60px #E2E7FF;
+    border-radius: 0px 50px 50px 50px;
+}
+.pay-form {
+    display: grid
+}
+.product-item {
+    display: grid;
+}
+
+/* price-form */
+
+.price-list {
+display: grid;
+}
+.price-list__items {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+}
+.price-list__item {
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    border: 1.5px solid #E1E3EE;
+    border-top: none;
+    align-items: center;
+    padding: 11px 17px;
+}
+.first-product {
+    border-radius: 15px 15px 0 0;
+    border-top: 1.5px solid #E1E3EE;
+}
+.last-product {
+    border-radius: 0 0 25px 25px;
+}
+.price-list__item:hover {
+    background: #F4F5FA;
+}
+.price-list__item__header {
+    font-weight: 600;
+    font-size: 16px;
+}
+.price-list__item__footer {
+    font-size: 13px;
+}
+.radio {
+    display: none;
+}
+.fake {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    border: 1.5px solid #E1E3EE;
+    position: relative;
+    border-radius: 50%;
+}
+.fake::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #23C967;
+    opacity: 0;
+    transition: .2s;
+    border-radius: 50%;
+}
+.radio:checked + .fake::before {
+    opacity: 1;
+}
+.radio:checked ~ div > .price-list__item__footer {
+    color: #23C967;
+}
+
+/* products */
+.products {
+    display: grid;
+    padding-right: 10px;
+    max-height: 360px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+.products::-webkit-scrollbar {
+    width: 4px;
+}
+.products::-webkit-scrollbar-track {
+    background: #E1E3EE;
+    border-radius: 5px;
+}
+.products::-webkit-scrollbar-thumb {
+    background: #23C967;
+    border-radius: 5px;
+}
+.pay-form__footer {
+    display: grid;
+}
+.success-form, .failed-form {
+    display: grid;
+}
+
+.spinner {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #E2E7FF;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.img-cart {
+display: grid;
+justify-self: center;
+margin: 10px 0;
+}
+
+/* display */
+.d-none {
+    display: none;
+    }

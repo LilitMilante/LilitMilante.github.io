@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- pay form -->
+        <div class="pay-form" id="pay-form">
+            <div class="products" id="products">
+                <h3 class="mb-12">Info</h3>
+                <label for="email" class="mb-12">Enter your email address</label>
+                <input type="email" class="mb-25" id="email" placeholder="team@checkforpatent.com">
+                
+                <div class="product-item" id="product-1">
+                    <h3 class="mb-12">Product 1</h3>
+                    <label for="keyword-1" class="mb-12">Enter main keyword for the product</label>
+                    <input type="text" class="mb-25" id="keyword-1" placeholder="for example, sylicon wine cup">
+        
+                    <label for="link" class="mb-12">Enter link to the similar product as a reference</label>
+                    <input type="url" class="mb-25" id="link" placeholder="https://...">
+                </div>
+            </div>
+            <div class="pay-form__footer">
+                <button class="btn-add" onclick="showMoreProducts()"><h3 class="mb-12 text-green">Add more products <img src="./img/btn-add.svg" alt=""></h3></button>
+                <p class="mb-12">We offer discount up to 36% for multiple checks</p>
+                <button type="submit" class="mb-12 btn" id="pay-btn">Submit and Pay 24.99 USD</button>
+                   
+                
+                <p class="text-center text-gray"><img src="./img/lock.svg" alt="lock"> Secure payment with Stripe</p>
+            </div>
+        </div>
+
+        <!-- price list -->
+        <div class="price-list d-none" id="price-list-form">
+            <h3 class="mb-12">Adding more products</h3>
+            <p class="mb-12">The more items you check, the better the price.</p>
+            <div class="price-list__items mb-25">
+                <label for="5" class="price-list__item first-product">
+                    <input type="radio" id="5" class="radio" name="products" checked>
+                    <span class="fake"></span>
+                    <div>
+                        <p class="price-list__item__header">5 products for 80 usd / 16$ for each</p>
+                        <p class="price-list__item__footer">You safe 36% on each patent check </p>
+                    </div>
+                </label>
+                <label for="4" class="price-list__item">
+                    <input type="radio" id="4" class="radio" name="products">
+                    <span class="fake"></span>
+                    <div>
+                        <p class="price-list__item__header">4 products for 72 usd / 18$ for each</p>
+                        <p class="price-list__item__footer">You safe 28% on each patent check</p>
+                    </div>
+                </label>
+                <label for="3" class="price-list__item">
+                    <input type="radio" id="3" class="radio" name="products">
+                    <span class="fake"></span>
+                    <div>
+                        <p class="price-list__item__header">3 products for 60 usd / 20$ for each</p>
+                        <p class="price-list__item__footer">You safe 20% on each patent check</p>
+                    </div>
+                </label>
+                <label for="2" class="price-list__item">
+                    <input type="radio" id="2" class="radio" name="products">
+                    <span class="fake"></span>
+                    <div>
+                        <p class="price-list__item__header">2 products for 44 usd / 22$ for each</p>
+                        <p class="price-list__item__footer">You safe 12% on each patent check</p>
+                    </div>
+                </label>
+                <label for="1" class="price-list__item last-product">
+                    <input type="radio" id="1" class="radio" name="products">
+                    <span class="fake"></span>
+                    <div>
+                        <p class="price-list__item__header">1 product for 24.99 usd</p>
+                    </div>
+                </label>
+            </div>
+            <button type="button" id="continue-btn" class="btn">Continue</button>
+        </div>
+        <!-- success -->
+        <div id="success-form" class="success-form d-none">
+            <div>
+                <h3 class="mb-12">Successfull payment</h3>
+                <p>Your request has been accepted and will be processed within 24 working hours. We will send you a payment details
+                    and
+                    all information to your email.</p>
+                </div>
+                <img src="./img/pay-cart.svg" alt="" class="img-cart">
+                <form action="/index.html">
+                    <button type="submit" class=" btn btn-85">Back</button>
+                </form>
+            </div>
+            <!-- failed -->
+            <div class="failed-form d-none" id="failed-form">
+                <div>
+                    <h3 class="mb-12">Your payment failed</h3>
+                    <p>Sorry, but we’ve having trouble processing your payment. You have been not charged for this transaction.</p>
+                    </div>
+                    <img src="./img/failed-pay.svg" alt="" class="img-cart">
+                    <form action="/index.html">
+                        <button type="submit" class=" btn-bg-red">Try to pay again</button>
+                    </form>
+            </div>
+    </div>
+    <script src="./js/file.js"></script>
+</body>
+
+</html>
